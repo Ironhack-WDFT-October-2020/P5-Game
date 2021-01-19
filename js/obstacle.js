@@ -2,6 +2,7 @@ class Obstacle {
 	constructor(coinImage) {
 		this.image = coinImage;
 		this.x = width;
+		// give this a constant value to begin with
 		this.y = (Math.random() * height) / 2.5;
 		this.width = 50;
 		this.height = 50;
@@ -15,6 +16,8 @@ class Obstacle {
 		let obstacleY = this.y + this.height / 2;
 		let playerX = playerInfo.x + playerInfo.width / 2;
 		let playerY = playerInfo.y + playerInfo.height / 2;
+
+		// https://p5js.org/reference/#/p5/dist
 
 		if (dist(obstacleX, obstacleY, playerX, playerY) > 25) {
 			return false;
